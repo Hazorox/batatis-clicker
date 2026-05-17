@@ -115,7 +115,7 @@ const App = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         ></iframe>
       ) : null}
-      <span className="count text-5xl z-10 absolute bottom-1 overflow-hidden">
+      <span className="count text-gray-100 text-5xl z-10 absolute bottom-1 overflow-hidden">
         {count}
       </span>
     </div>
