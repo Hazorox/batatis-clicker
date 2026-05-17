@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+@import "tailwindcss";
+body {
+  font-family: "Comfortaa";
+  overflow: hidden;
+}
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translate(var(--x), 0);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(var(--x), var(--y));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), -50px);
+  }
+}
+@keyframes bouncee {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes rain {
+  0% {
+    top: -80px;
+  }
+  100% {
+    top: 95%;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(140deg);
+  }
+  60% {
+    transform: rotate(200deg);
+  }
+  80% {
+    transform: rotate(320deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.float {
+  font-size: 2rem;
+  animation: floatUp 1s ease;
+}
+
+.bouncy {
+  animation: bouncee 0.2s linear;
+}
+.batatis {
+  animation:
+    rain 8s infinite,
+    rotate 3s infinite;
+  /* animation:rotate 1s infinite; */
+}
