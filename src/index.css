@@ -55,6 +55,10 @@ body {
     transform: rotate(360deg);
   }
 }
+@keyframes fade{
+  from {transform: translate(500px);}
+  to{transform:translate(0px);}
+}
 .float {
   font-size: 2rem;
   animation: floatUp 1s ease;
@@ -68,4 +72,7 @@ body {
     rain 8s infinite,
     rotate 3s infinite;
   /* animation:rotate 1s infinite; */
+}
+.vid{
+  animation: fade 2s ease-in-out;
 }
