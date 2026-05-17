@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import {  useRef, useState } from "react";
 
 const App = () => {
   const [countIncrement, setCountIncrement] = useState(1);
@@ -10,7 +10,7 @@ const App = () => {
       top: number;
     }[]
   >([]);
-  const [count, setCount] = useState(parseInt(localStorage.getItem("count")));
+  const [count, setCount] = useState(parseInt(localStorage.getItem("count")??"0"));
   const counter = useRef(0);
   // const num = useRef<HTMLSpanElement>(null);
   const potato = useRef<HTMLImageElement>(null);
@@ -27,8 +27,8 @@ const App = () => {
     const randY = -(Math.random() * 80 + 40);
     setCount((prev) => prev + countIncrement);
     localStorage.setItem("count", (count + countIncrement).toString());
-    setCountIncrement(Math.ceil(count/200))
-    if(count == 999) new Audio("./wow.mp3").play()
+    setCountIncrement(Math.ceil(count / 200));
+    if (count == 999) new Audio("./wow.mp3").play();
     setIncrements((prev) => {
       return [
         ...prev,
